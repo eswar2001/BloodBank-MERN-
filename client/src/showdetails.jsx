@@ -22,9 +22,9 @@ export const ShowData = () => {
             <div className="container">
                 <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_YO8gSl.json" background="transparent" speed="1" style={{ margin: 'auto', width: '300px', height: '300px' }} loop autoplay></lottie-player>
                 <h2>Registered BloodDonors</h2>
-                <table class="centered highlight" style={{ width: '100vw' }}>
+                <table class="highlight">
                     <thead>
-                        <tr>
+                        <tr style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>
                             <td>name</td>
                             <td>Age today</td>
                             <td>bloodGroup</td>
