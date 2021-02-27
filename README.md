@@ -1,6 +1,4 @@
-��# BloodBank
-
-# Project name
+# BloodBank
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
 ![GitHub repo size](https://img.shields.io/github/repo-size/eswar2001/BloodBank)
@@ -48,4 +46,4 @@ If you want to contact me you can reach me at <eswar.abisheak94@gmail.com>.
 ## License
 <!--- If you're not sure which open license to use see https://choosealicense.com/--->
 
-This project uses the following license: [<license_name>](<link>).
+This project uses the following license: [MIT License](https://choosealicense.com/licenses/mit/).
