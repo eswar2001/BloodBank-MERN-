@@ -28,7 +28,7 @@ export const ShowData = () => {
                             <td>name</td>
                             <td>Age today</td>
                             <td>bloodGroup</td>
-                            <td>city</td>
+                            <td>location</td>
                             <td>contact</td>
                             <td>email</td>
                         </tr>
@@ -39,7 +39,7 @@ export const ShowData = () => {
                                 <td>{i.name}</td>
                                 <td>{getAge(i.DOB)}</td>
                                 <td>{i.bloodGroup}</td>
-                                <td>{i.city}</td>
+                                <td>{`${i.city},${i.state},${i.country},${i.zip}`}</td>
                                 <td>{i.contact}</td>
                                 <td>{i.email}</td>
                             </tr>)

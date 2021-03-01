@@ -8,9 +8,17 @@ router.get('/getdata', (req, res) => {
         .catch((e) => { res.status(422).status({ msg: e }) })
 })
 router.post('/signup', (req, res) => {
-    const { name, email, contact, bloodGroup, city, DOB } = req.body;
+    const { name,
+        email,
+        contact,
+        bloodGroup,
+        city,
+        DOB,
+        state,
+        country,
+        zip, } = req.body;
     console.log(req.body)
-    if (!email || !name || !contact || !bloodGroup || !city || !DOB) {
+    if (!email || !name || !contact || !bloodGroup || !city || !DOB || !state || !country || !zip) {
         res.status(422).json({ error: "Please add all the fields" })
     }
     User.findOne({ email: email })
@@ -19,7 +27,15 @@ router.post('/signup', (req, res) => {
                 return res.status(422).json({ error: "User already exists with the email" })
             }
             const user = new User({
-                name, email, contact, bloodGroup, city, DOB
+                name,
+                email,
+                contact,
+                bloodGroup,
+                city,
+                DOB,
+                state,
+                country,
+                zip,
             })
             user.save()
                 .then((user) => {
