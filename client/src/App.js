@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Register } from './Register'
 import { ShowData } from './showdetails'
 function App() {

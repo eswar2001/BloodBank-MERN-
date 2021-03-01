@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 export const ShowData = () => {
     const [data, setData] = useState([]);
     const getAge = (dob) => {
