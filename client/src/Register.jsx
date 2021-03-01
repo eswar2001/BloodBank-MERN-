@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
 
 export const Register = () => {
-    const [name, setName] = useState('')
+    const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [DOB, setDOB] = useState('')
     const [contact, setcontact] = useState('')
@@ -50,7 +50,7 @@ export const Register = () => {
                     <p>Please fill in this form to Register yourself.</p>
                     <hr />
                     <label for="name" ><b>Name</b></label>
-                    <input value={name} onChange={(e) => { setName(e.target.value) }} type="text" placeholder="Enter name" name="name" id="name" required />
+                    <input value={name} onChange={(e) => { setname(e.target.value) }} type="text" placeholder="Enter name" name="name" id="name" required />
                     <label for="birthday">Birthday:</label><br />
                     <br /><input value={DOB} onChange={(e) => { setDOB(e.target.value) }} type="date" id="birthday" name="birthday" />
                     <br /><br />
@@ -68,16 +68,29 @@ export const Register = () => {
                     <hr /><label for="state"><b>state</b></label>
 
                     <input value={state} onChange={(e) => { setstate(e.target.value) }} type="text" placeholder="state" name="state" id="state" required />
-                    <hr /><label for="street"><b>street</b></label>
+                    <hr /><label for="state"><b>state</b></label>
+                    <label for="city"><b>city</b></label>
+
+                    <input value={city} onChange={(e) => { setcity(e.target.value) }} type="text" placeholder="city" name="city" id="city" required />
+                    <hr />
 
                     <input value={zip} onChange={(e) => { setzip(e.target.value) }} type="text" placeholder="zip" name="zip" id="zip" required />
                     <hr />
 
-                    <label for="city"><b>city</b></label>
-                    <input value={city} onChange={(e) => { setcity(e.target.value) }} type="text" placeholder="city" name="city" id="city" required />
-                    <hr />
 
-                    <button className="btn waves-effect waves-light" onClick={(e) => { PostData(); e.preventDefault(); }} type="submit" >Register</button>
+
+                    <button className="btn waves-effect waves-light" onClick={(e) => {
+                        PostData();
+                        setname("");
+                        setemail("");
+                        setcontact("");
+                        setbloodGroup("");
+                        setcity("");
+                        setDOB("");
+                        setstate("");
+                        setcountry("");
+                        setzip("");
+                    }} type="submit" >Register</button>
                 </form>
             </div>
         </>)
